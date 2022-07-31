@@ -2,8 +2,10 @@ import React from "react";
 import truck from "../images/truck.png";
 import cargo from "../images/cargo.png";
 import cargo1 from "../images/cargo1.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#B2BEFF] h-[100vh] flex justify-center items-center w-[100vw] flex-col gap-y-9">
       <div className="absolute top-5 left-5">
@@ -47,6 +49,7 @@ const Home = () => {
         />
         <button
           className="h-[140px] bg-[#98FFD4] w-[150px] rounded-[20px]"
+          onClick={() => navigate("/dash")}
           style={{
             fontFamily: "Mulish",
             fontWeight: 700,
